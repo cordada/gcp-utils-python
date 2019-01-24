@@ -2,7 +2,47 @@
 # note: it is mandatory to register all dependencies of the required packages.
 
 # Required packages:
-# None
+cryptography==2.5
+google-api-python-client==1.7.4
+google-auth==1.6.1
+requests==2.21.0
 
 # Packages dependencies:
-# None
+#   - cryptography:
+#       - asn1crypto
+#       - cffi
+#           - pycparser
+#       - idna
+#       - six
+#   - google-api-python-client:
+#       - google-auth
+#       - google-auth-httplib2
+#       - httplib2
+#       - six
+#       - uritemplate
+#   - google-auth:
+#       - cachetools
+#       - pyasn1-modules
+#           - pyasn1
+#       - rsa
+#       - six
+#   - requests:
+#       - certifi
+#       - chardet
+#       - idna
+#       - urllib3
+asn1crypto==0.24.0
+cachetools==3.0.0
+certifi==2018.11.29
+cffi==1.11.5
+chardet==3.0.4
+google-auth-httplib2==0.0.3
+httplib2==0.12.0
+idna==2.8
+pyasn1==0.4.5
+pyasn1-modules==0.2.3
+pycparser==2.19
+rsa==4.0
+six==1.12.0
+uritemplate==3.0.0
+urllib3==1.24.1
