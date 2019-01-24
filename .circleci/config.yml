@@ -1,0 +1,46 @@
+# CircleCI 2.0 configuration file for this project.
+#
+# Notes:
+#   - Do not use CircleCI's brand of Docker images unless it is for a secondary environment.
+#   - We chose not to use dependencies caching because it is complicated to do it right and it is
+#     not worth the effort for a project so small.
+#
+# For more information check out:
+#   - https://circleci.com/docs/2.0/language-python/ for more details
+#   - https://circleci.com/docs/2.0/configuration-reference/
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: python:3.7.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install --upgrade setuptools wheel
+            pip install -r requirements/test.txt
+#            pip install -r requirements/extras.txt
+
+      # run tests!
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            make lint
+            make test-coverage
+            make test-coverage-report-console
+            make test-coverage-report-html
+            make dist
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports

@@ -1,0 +1,27 @@
+# note: it is mandatory to register all dependencies of the required packages.
+# (pro tip: keep to the minimum the number of packages declared here)
+-r base.txt
+
+# Required packages:
+setuptools==40.6.3
+twine==1.12.1
+wheel==0.32.3
+
+# Packages dependencies:
+#   - twine:
+#       - pkginfo
+#       - readme-renderer
+#           - bleach
+#               - webencodings
+#           - docutils
+#           - Pygments
+#           - six
+#       - requests
+#       - requests-toolbelt
+#       - setuptools
+#       - tqdm
+pkginfo==1.5.0.1
+readme-renderer==24.0
+requests==2.21.0
+requests-toolbelt==0.8.0
+tqdm==4.29.1
