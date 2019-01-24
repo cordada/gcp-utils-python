@@ -18,7 +18,7 @@ test_requirements = [
 ]
 
 # TODO: extract from '__version__' in 'fd_gcp/__init__.py'.
-packages_version = '0.0.1.dev1'
+packages_version = '0.0.1'
 
 # note: the "typing information" of this project's packages is not made available to its users
 #   automatically; it needs to be packaged and distributed. The way to do so is fairly new and
