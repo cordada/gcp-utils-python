@@ -5,7 +5,12 @@ from setuptools import find_packages, setup
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
+# TODO: add reasonable upper-bound per package.
 requirements = [
+    'cryptography>=2.4.2',
+    'google-api-python-client>=1.7.4',
+    'google-auth>=1.6.1',
+    'requests>=2.20.1',
 ]
 
 # extras_requirements = {
@@ -15,6 +20,8 @@ setup_requirements = [
 ]
 
 test_requirements = [
+    # note: include here only packages **imported** in test code (e.g. 'requests-mock'), NOT those
+    #   like 'coverage' or 'tox'.
 ]
 
 # TODO: extract from '__version__' in 'fd_gcp/__init__.py'.
