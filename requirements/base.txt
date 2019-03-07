@@ -3,8 +3,8 @@
 
 # Required packages:
 cryptography==2.5
-google-api-python-client==1.7.4
-google-auth==1.6.1
+google-api-python-client==1.7.8
+google-auth==1.6.3
 requests==2.21.0
 
 # Packages dependencies:
@@ -32,15 +32,15 @@ requests==2.21.0
 #       - idna
 #       - urllib3
 asn1crypto==0.24.0
-cachetools==3.0.0
+cachetools==3.1.0
 certifi==2018.11.29
 cffi==1.11.5
 chardet==3.0.4
 google-auth-httplib2==0.0.3
-httplib2==0.12.0
+httplib2==0.12.1
 idna==2.8
 pyasn1==0.4.5
-pyasn1-modules==0.2.3
+pyasn1-modules==0.2.4
 pycparser==2.19
 rsa==4.0
 six==1.12.0
