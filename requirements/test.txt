@@ -2,6 +2,7 @@
 -r base.txt
 
 # Required packages:
+codecov==2.0.15
 coverage==4.5.2
 flake8==3.7.6
 mypy==0.670
@@ -9,6 +10,9 @@ mypy==0.670
 tox==3.7.0
 
 # Packages dependencies:
+#   - codecov:
+#       - coverage
+#       - requests
 #   - flake8:
 #       - mccabe
 #       - pycodestyle
