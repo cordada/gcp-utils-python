@@ -48,6 +48,7 @@ test_requirements = [
 #   - https://www.python.org/dev/peps/pep-0561/#packaging-type-information
 #   - https://github.com/python/typing/issues/84
 #   - https://github.com/python/mypy/issues/3930
+# warning: remember to replicate this in the manifest file for source distribution ('MANIFEST.in').
 _package_data = {
     'fd_gcp': [
         # Indicates that the "typing information" of the package should be distributed.
@@ -56,16 +57,18 @@ _package_data = {
 }
 
 setup(
-    author="Fyndata",
+    author='Fyndata (Fynpal SpA)',
     author_email='no-reply@fyndata.com',
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3.7',
     ],
     description="Fyndata's Python library of Google Cloud Platform (GCP) utils.",
     # extras_require=extras_requirements,
     install_requires=requirements,
+    license="MIT",
     long_description=readme,
     long_description_content_type='text/markdown',
     include_package_data=True,

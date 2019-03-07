@@ -4,25 +4,10 @@ SHELL = /usr/bin/env bash
 .PHONY: help
 .PHONY: clean clean-build clean-pyc clean-test
 .PHONY: lint test test-all test-coverage test-coverage-report-console test-coverage-report-html
-.PHONY: dist install
-
-define PRINT_HELP_PYSCRIPT
-import re, sys
-
-for line in sys.stdin:
-	match = re.match(r'^([a-zA-Z_-]+):.*?## (.*)$$', line)
-	if match:
-		target, help = match.groups()
-		print("%-20s %s" % (target, help))
-endef
-export PRINT_HELP_PYSCRIPT
-
+.PHONY: dist upload-release
 
 help:
-	@echo "Read README.md"
-	@echo ""
-	@echo "Makefile tasks:"
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | sort | awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, lint, coverage and Python artifacts
 
@@ -51,25 +36,26 @@ lint: ## run tools for code style analysis, static type check, etc
 	flake8 --config=setup.cfg  fd_gcp  tests
 	mypy --config-file setup.cfg  fd_gcp
 
-test: ## run tests
+test: ## run tests quickly with the default Python
 	python setup.py test
 
 test-all: ## run tests on every Python version with tox
-	@echo "TODO: configure tox"
+	tox
 
 test-coverage: ## run tests and record test coverage
-	coverage run setup.py test
+	coverage run --rcfile=setup.cfg setup.py test
 
 test-coverage-report-console: ## print test coverage summary
-	coverage report -m
+	coverage report --rcfile=setup.cfg -m
 
 test-coverage-report-html: ## generate test coverage HTML report
-	coverage html
+	coverage html --rcfile=setup.cfg
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
 	python setup.py bdist_wheel
+	twine check dist/*
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages
-	python setup.py install
+upload-release: ## upload dist packages
+	python -m twine upload 'dist/*'
