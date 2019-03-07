@@ -4,7 +4,7 @@ SHELL = /usr/bin/env bash
 .PHONY: help
 .PHONY: clean clean-build clean-pyc clean-test
 .PHONY: lint test test-all test-coverage test-coverage-report-console test-coverage-report-html
-.PHONY: dist install
+.PHONY: dist upload-release
 
 define PRINT_HELP_PYSCRIPT
 import re, sys
@@ -69,7 +69,8 @@ test-coverage-report-html: ## generate test coverage HTML report
 dist: clean ## builds source and wheel package
 	python setup.py sdist
 	python setup.py bdist_wheel
+	twine check dist/*
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages
-	python setup.py install
+upload-release: ## upload dist packages
+	python -m twine upload 'dist/*'
