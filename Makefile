@@ -51,11 +51,11 @@ lint: ## run tools for code style analysis, static type check, etc
 	flake8 --config=setup.cfg  fd_gcp  tests
 	mypy --config-file setup.cfg  fd_gcp
 
-test: ## run tests
+test: ## run tests quickly with the default Python
 	python setup.py test
 
 test-all: ## run tests on every Python version with tox
-	@echo "TODO: configure tox"
+	tox
 
 test-coverage: ## run tests and record test coverage
 	coverage run --rcfile=setup.cfg setup.py test
