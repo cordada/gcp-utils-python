@@ -58,13 +58,13 @@ test-all: ## run tests on every Python version with tox
 	@echo "TODO: configure tox"
 
 test-coverage: ## run tests and record test coverage
-	coverage run setup.py test
+	coverage run --rcfile=setup.cfg setup.py test
 
 test-coverage-report-console: ## print test coverage summary
-	coverage report -m
+	coverage report --rcfile=setup.cfg -m
 
 test-coverage-report-html: ## generate test coverage HTML report
-	coverage html
+	coverage html --rcfile=setup.cfg
 
 dist: clean ## builds source and wheel package
 	python setup.py sdist
