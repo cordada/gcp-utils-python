@@ -1,5 +1,22 @@
 #!/usr/bin/env python
+import os
+import re
+from typing import Sequence
+
 from setuptools import find_packages, setup
+
+
+def get_version(*file_paths: Sequence[str]) -> str:
+    filename = os.path.join(os.path.dirname(__file__), *file_paths)
+    version_file = open(filename).read()
+    version_match = re.search(
+        r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError('Unable to find version string.')
+
+
+version = get_version('fd_gcp', '__init__.py')
 
 
 with open('README.md') as readme_file:
@@ -23,9 +40,6 @@ test_requirements = [
     # note: include here only packages **imported** in test code (e.g. 'requests-mock'), NOT those
     #   like 'coverage' or 'tox'.
 ]
-
-# TODO: extract from '__version__' in 'fd_gcp/__init__.py'.
-packages_version = '0.1.0'
 
 # note: the "typing information" of this project's packages is not made available to its users
 #   automatically; it needs to be packaged and distributed. The way to do so is fairly new and
@@ -63,6 +77,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/fyndata/gcp-utils-python',
-    version=packages_version,
+    version=version,
     zip_safe=False,
 )
