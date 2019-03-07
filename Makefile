@@ -6,23 +6,8 @@ SHELL = /usr/bin/env bash
 .PHONY: lint test test-all test-coverage test-coverage-report-console test-coverage-report-html
 .PHONY: dist upload-release
 
-define PRINT_HELP_PYSCRIPT
-import re, sys
-
-for line in sys.stdin:
-	match = re.match(r'^([a-zA-Z_-]+):.*?## (.*)$$', line)
-	if match:
-		target, help = match.groups()
-		print("%-20s %s" % (target, help))
-endef
-export PRINT_HELP_PYSCRIPT
-
-
 help:
-	@echo "Read README.md"
-	@echo ""
-	@echo "Makefile tasks:"
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | sort | awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-25s\033[0m %s\n", $$1, $$2}'
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, lint, coverage and Python artifacts
 
