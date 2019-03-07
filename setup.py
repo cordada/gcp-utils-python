@@ -48,6 +48,7 @@ test_requirements = [
 #   - https://www.python.org/dev/peps/pep-0561/#packaging-type-information
 #   - https://github.com/python/typing/issues/84
 #   - https://github.com/python/mypy/issues/3930
+# warning: remember to replicate this in the manifest file for source distribution ('MANIFEST.in').
 _package_data = {
     'fd_gcp': [
         # Indicates that the "typing information" of the package should be distributed.
