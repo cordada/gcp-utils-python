@@ -30,4 +30,4 @@ analogy of AWS' concept of *Amazon Resource Name* (ARN): *Google Resource Name*
 """
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
