@@ -28,3 +28,6 @@ analogy of AWS' concept of *Amazon Resource Name* (ARN): *Google Resource Name*
   ``kms_crypto_key_resource_name`` (unlike ``kms_crypto_key_id``).
 
 """
+
+
+__version__ = '0.1.1'

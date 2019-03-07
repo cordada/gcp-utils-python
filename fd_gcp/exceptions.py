@@ -42,7 +42,7 @@ class ResourcePermissionDenied(Error):
 
     """
 
-    def __init__(self, resource: str =None, permission: str =None) -> None:
+    def __init__(self, resource: str = None, permission: str = None) -> None:
         """Constructor.
 
         :param resource: a resource's ID, GRN or some other identifier
@@ -76,7 +76,7 @@ class ResourceNotFound(Error):
 
     """
 
-    def __init__(self, resource: str =None) -> None:
+    def __init__(self, resource: str = None) -> None:
         """Constructor.
 
         :param resource: a resource's ID, GRN or some other identifier
@@ -192,7 +192,7 @@ def _detect_resource_not_found(
 
     try:
         exc_reason = exc._get_reason().strip()
-        re_pattern = re.compile("^(?P<resource_type>[a-zA-Z0-9_]+) (?P<resource>.+) not found\.")
+        re_pattern = re.compile(r"^(?P<resource_type>[a-zA-Z0-9_]+) (?P<resource>.+) not found\.")
         re_match = re_pattern.match(exc_reason)
 
         if re_match:
