@@ -234,7 +234,7 @@ def create_key_ring(
 def create_crypto_key(
     api_client: GcpResource,
     key_ring_grn: str,
-    crypto_key_id: str =None,
+    crypto_key_id: str = None,
 ) -> str:
     """
     Create a crypto key within a key ring.

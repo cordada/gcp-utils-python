@@ -34,7 +34,7 @@ from .gcp_kms import (  # noqa: F401
 def create_crypto_key(
     api_client: object,
     key_ring_grn: str,
-    crypto_key_id: str =None,
+    crypto_key_id: str = None,
 ) -> str:
     """
     Create a crypto key (mock) within a key ring.

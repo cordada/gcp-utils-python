@@ -57,7 +57,7 @@ def get_env_project_id() -> str:
     return project_id
 
 
-def get_gce_credentials(service_account_email: str =None) -> GcpCredentials:
+def get_gce_credentials(service_account_email: str = None) -> GcpCredentials:
     """
     Return credentials provided by Compute Engine service account.
 
