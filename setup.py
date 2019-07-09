@@ -27,7 +27,7 @@ requirements = [
     'cryptography>=2.5',
     'google-api-python-client>=1.7.8',
     'google-auth>=1.6.3',
-    'requests>=2.21.0',
+    'requests>=2.22.0',
 ]
 
 # extras_requirements = {
