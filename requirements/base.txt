@@ -2,10 +2,10 @@
 # note: it is mandatory to register all dependencies of the required packages.
 
 # Required packages:
-cryptography==2.5
-google-api-python-client==1.7.8
+cryptography==2.7
+google-api-python-client==1.7.9
 google-auth==1.6.3
-requests==2.21.0
+requests==2.22.0
 
 # Packages dependencies:
 #   - cryptography:
@@ -32,17 +32,17 @@ requests==2.21.0
 #       - idna
 #       - urllib3
 asn1crypto==0.24.0
-cachetools==3.1.0
-certifi==2018.11.29
-cffi==1.11.5
+cachetools==3.1.1
+certifi==2019.6.16
+cffi==1.12.3
 chardet==3.0.4
 google-auth-httplib2==0.0.3
-httplib2==0.12.1
+httplib2==0.13.0
 idna==2.8
 pyasn1==0.4.5
-pyasn1-modules==0.2.4
+pyasn1-modules==0.2.5
 pycparser==2.19
 rsa==4.0
 six==1.12.0
 uritemplate==3.0.0
-urllib3==1.24.1
+urllib3==1.25.3
