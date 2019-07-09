@@ -2,7 +2,7 @@
 # note: it is mandatory to register all dependencies of the required packages.
 
 # Required packages:
-cryptography==2.5
+cryptography==2.7
 google-api-python-client==1.7.8
 google-auth==1.6.3
 requests==2.22.0
