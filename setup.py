@@ -24,10 +24,10 @@ with open('README.md') as readme_file:
 
 # TODO: add reasonable upper-bound per package.
 requirements = [
-    'cryptography>=2.5',
-    'google-api-python-client>=1.7.8',
+    'cryptography>=2.7',
+    'google-api-python-client>=1.7.9',
     'google-auth>=1.6.3',
-    'requests>=2.21.0',
+    'requests>=2.22.0',
 ]
 
 # extras_requirements = {
