@@ -4,6 +4,13 @@ History
 unreleased (YYYY-MM-DD)
 +++++++++++++++++++++++
 
+0.1.3 (2020-06-08)
+++++++++++++++++++
+
+* (PR #16, 2020-06-08) config: Add support for multiple Python versions to CircleCI
+* (PR #18, 2020-06-08) requirements: update 'tox' (test)
+* (PR #17, 2020-06-08) Add Python 3.8 support
+
 0.1.2 (2019-07-09)
 ++++++++++++++++++
 
