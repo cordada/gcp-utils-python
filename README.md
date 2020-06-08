@@ -21,6 +21,6 @@ Fyndata's Python library of Google Cloud Platform (GCP) utils.
 
 ## Supported Python versions
 
-Only Python 3.7. Python 3.6 and below will not work because we use some features introduced in
-Python 3.7. In the future, for real multiversion support we need to set up `tox`
+Only Python 3.7 and 3.8. Python 3.6 and below will not work because we use some features introduced
+in Python 3.7. In the future, for real multiversion support we need to set up `tox`
 (see [tox.ini](tox.ini) and [setup.py](setup.py)).
