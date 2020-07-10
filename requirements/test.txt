@@ -44,8 +44,8 @@ mypy-extensions==0.4.1
 packaging==19.0
 pluggy==0.13.1
 py==1.8.0
-pycodestyle==2.5.0
-pyflakes==2.1.1
+pycodestyle==2.6.0
+pyflakes==2.2.0
 pyparsing==2.4.0
 six==1.15.0
 toml==0.10.1
