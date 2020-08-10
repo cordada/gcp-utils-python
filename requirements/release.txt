@@ -4,7 +4,7 @@
 
 # Required packages:
 bumpversion==0.5.3
-setuptools==41.0.1
+setuptools==49.3.0
 twine==1.13.0
 wheel==0.33.4
 
