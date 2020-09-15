@@ -92,19 +92,7 @@ Push commit ``abcd1234`` and tag ``vX.Y.Z`` automatically created by ``bumpversi
 
   * "Publish release".
 
-4) Publish to PyPI
-+++++++++++++++++++
-
-(local workstation)
-
-Run::
-
-    make upload-release
-    make -s clean
-
-Check out the `project's page at PyPI <https://pypi.org/project/fyndata-gcp-utils/>`_.
-
-5) Update ``develop``
+4) Update ``develop``
 +++++++++++++++++++
 
 (local workstation)
