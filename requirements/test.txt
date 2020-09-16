@@ -3,7 +3,7 @@
 
 # Required packages:
 codecov==2.0.15
-coverage==4.5.3
+coverage==5.3
 flake8==3.8.3
 mypy==0.711
 #requests-mock==1.5.2
