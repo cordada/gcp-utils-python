@@ -4,6 +4,20 @@ History
 unreleased (YYYY-MM-DD)
 +++++++++++++++++++++++
 
+0.1.4 (2020-09-15)
+++++++++++++++++++
+
+* (PR #26, 2020-09-15) build(deps): bump uritemplate from 3.0.0 to 3.0.1
+* (PR #39, 2020-09-15) config: Add PyPI package uploading to CI
+* (PR #23, 2020-09-15) build(deps): bump twine from 1.13.0 to 3.2.0
+* (PR #38, 2020-09-15) build(deps): bump setuptools from 41.0.1 to 50.3.0
+* (PR #27, 2020-07-09) config: Verify Python dependency compatibility in CI
+* (PR #28, 2020-07-09) requirements: update dependencies of 'flake8'
+* (PR #24, 2020-07-08) build(deps): bump flake8 from 3.7.8 to 3.8.3
+* (PR #22, 2020-07-07) config: Add configuration for GitHub Dependabot
+* (PR #21, 2020-06-18) Update readme
+* (PR #20, 2020-06-09) requirements: update 'httplib2'
+
 0.1.3 (2020-06-08)
 ++++++++++++++++++
 
