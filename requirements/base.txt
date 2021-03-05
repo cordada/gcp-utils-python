@@ -3,7 +3,7 @@
 
 # Required packages:
 cryptography==3.3.2
-google-api-python-client==1.7.11
+google-api-python-client==2.0.2
 google-auth==1.17.2
 requests==2.25.1
 
